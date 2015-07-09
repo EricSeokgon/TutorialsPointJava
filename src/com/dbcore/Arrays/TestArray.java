@@ -13,6 +13,7 @@ public class TestArray {
 
     public static void main(String[] args) {
         double[] myList = {1.9, 2.9, 3.4, 3.5};
+        String num ="";
 
         // Print all the array elements
         for (int i = 0; i < myList.length; i++) {
@@ -30,5 +31,10 @@ public class TestArray {
             if (myList[i] > max) max = myList[i];
         }
         System.out.println("Max is " + max);
+
+        for (double x : myList) {
+            num += (num.equals("")) ? x : ", " + x + "";
+        }
+        System.out.println("num is " + num);
     }
 }
