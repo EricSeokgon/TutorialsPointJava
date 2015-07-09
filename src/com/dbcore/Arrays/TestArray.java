@@ -36,5 +36,10 @@ public class TestArray {
             num += (num.equals("")) ? x : ", " + x + "";
         }
         System.out.println("num is " + num);
+
+        // Print all the array elements
+        for (double element: myList) {
+            System.out.println(element);
+        }
     }
 }
