@@ -1,8 +1,6 @@
 package com.dbcore.InputOutput;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * Project: TutorialsPointJava
@@ -16,12 +14,18 @@ import java.io.IOException;
 public class CopyFile {
     public static void main(String[] args) throws IOException {
 
-        FileInputStream in = null;
-        FileOutputStream out = null;
+        //FileInputStream in = null;
+        //FileOutputStream out = null;
+
+        FileReader in = null;
+        FileWriter out = null;
 
         try {
-            in = new FileInputStream("C:\\Users\\sklee\\IdeaProjects\\TutorialsPointJava\\src\\com\\dbcore\\InputOutput\\input.txt");
-            out = new FileOutputStream("C:\\Users\\sklee\\IdeaProjects\\TutorialsPointJava\\src\\com\\dbcore\\InputOutput\\output.txt");
+            //in = new FileInputStream("C:\\Users\\sklee\\IdeaProjects\\TutorialsPointJava\\src\\com\\dbcore\\InputOutput\\input.txt");
+            //out = new FileOutputStream("C:\\Users\\sklee\\IdeaProjects\\TutorialsPointJava\\src\\com\\dbcore\\InputOutput\\output.txt");//in = new FileInputStream("C:\\Users\\sklee\\IdeaProjects\\TutorialsPointJava\\src\\com\\dbcore\\InputOutput\\input.txt");
+            in = new FileReader("C:\\Users\\sklee\\IdeaProjects\\TutorialsPointJava\\src\\com\\dbcore\\InputOutput\\input.txt");
+            out = new FileWriter("C:\\Users\\sklee\\IdeaProjects\\TutorialsPointJava\\src\\com\\dbcore\\InputOutput\\output.txt");//in = new FileInputStream("C:\\Users\\sklee\\IdeaProjects\\TutorialsPointJava\\src\\com\\dbcore\\InputOutput\\input.txt");
+
 
             int c;
             while ((c = in.read()) != -1) {
