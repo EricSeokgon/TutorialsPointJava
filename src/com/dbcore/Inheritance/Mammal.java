@@ -1,4 +1,4 @@
 package com.dbcore.Inheritance;
 
-public class Mammal extends Animal{
+public class Mammal implements Animal{
 }

@@ -9,6 +9,6 @@ package com.dbcore.Inheritance;
  * Note:
  * To change this template use File | Settings | File Templates.
  */
-public class Animal{
+public interface Animal{
 }
 
