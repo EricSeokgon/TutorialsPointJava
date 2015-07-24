@@ -9,11 +9,11 @@ package com.dbcore.Multithreading;
  * Note:
  * To change this template use File | Settings | File Templates.
  */
-class RunnableDemo implements Runnable {
+class ThreadDemo extends Thread {
     private Thread t;
     private String threadName;
 
-    RunnableDemo( String name){
+    ThreadDemo( String name){
         threadName = name;
         System.out.println("Creating " +  threadName );
     }
@@ -46,10 +46,10 @@ class RunnableDemo implements Runnable {
 public class TestThread {
     public static void main(String args[]) {
 
-        RunnableDemo R1 = new RunnableDemo( "Thread-1");
-        R1.start();
+        ThreadDemo T1 = new ThreadDemo( "Thread-1");
+        T1.start();
 
-        RunnableDemo R2 = new RunnableDemo( "Thread-2");
-        R2.start();
+        ThreadDemo T2 = new ThreadDemo( "Thread-2");
+        T2.start();
     }
 }
